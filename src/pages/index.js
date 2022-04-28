@@ -28,7 +28,14 @@ export default function Home() {
               <li key={image.id}>
                 <a href={image.link} rel="noreferrer">
                   <div className={styles.imageImage}>
-                    <img width={image.width} height={image.height} src={image.image} alt="" />
+                    <img
+                      width={image.width}
+                      height={image.height}
+                      src={image.image}
+                      alt=""
+                      decoding="async"
+                      loading="lazy"
+                    />
                   </div>
                   <h3 className={styles.imageTitle}>
                     { image.title }
